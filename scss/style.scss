@@ -1,0 +1,21 @@
+/*!
+Theme Name: Skafora
+Theme URI: https://github.com/jrajalu/skafora.git
+Author: Jamaludin Rajalu
+Author URI: https://github.com/jrajalu
+Version: 1.0.0
+*/
+
+@import "webfonts";
+@import "normalize";
+@import "grid";
+@import "cssmenu";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}

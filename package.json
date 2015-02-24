@@ -1,0 +1,17 @@
+{
+  "name": "skafora",
+  "version": "1.0.0",
+  "description": "skafora",
+  "author": "Jamaludin Rajalu <jrajalu@ukm.edu.my>",
+  "license": "public domain",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jrajalu/skafora"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
