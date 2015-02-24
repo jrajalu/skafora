@@ -113,6 +113,107 @@ class CSS_Menu_Maker_Walker extends Walker {
 }
 
 /**
+ * Custom Post Type
+ *
+ */
+
+// Register Custom Post Type
+function skafora_slides() {
+
+  $labels = array(
+    'name'                => _x( 'Slides', 'Post Type General Name', 'skafora' ),
+    'singular_name'       => _x( 'Slide', 'Post Type Singular Name', 'skafora' ),
+    'menu_name'           => __( 'Slides', 'skafora' ),
+    'parent_item_colon'   => __( 'Parent Slide:', 'skafora' ),
+    'all_items'           => __( 'Manage', 'skafora' ),
+    'view_item'           => __( 'View Slide', 'skafora' ),
+    'add_new_item'        => __( 'Add New Slide', 'skafora' ),
+    'add_new'             => __( 'Add New', 'skafora' ),
+    'edit_item'           => __( 'Edit Slide', 'skafora' ),
+    'update_item'         => __( 'Update Slide', 'skafora' ),
+    'search_items'        => __( 'Search Slide', 'skafora' ),
+    'not_found'           => __( 'Not found', 'skafora' ),
+    'not_found_in_trash'  => __( 'Not found in Trash', 'skafora' ),
+  );
+  $args = array(
+    'label'               => __( 'sf_slide', 'skafora' ),
+    'description'         => __( 'Frontpage slideshow', 'skafora' ),
+    'labels'              => $labels,
+    'supports'            => array( 'title', 'thumbnail', ),
+    'hierarchical'        => false,
+    'public'              => true,
+    'show_ui'             => true,
+    'show_in_menu'        => true,
+    'show_in_nav_menus'   => false,
+    'show_in_admin_bar'   => false,
+    'menu_position'       => 5,
+    'menu_icon'           => 'dashicons-images-alt2',
+    'can_export'          => true,
+    'has_archive'         => true,
+    'exclude_from_search' => true,
+    'publicly_queryable'  => true,
+    'capability_type'     => 'page',
+  );
+  register_post_type( 'sf_slide', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'skafora_slides', 0 );
+
+// Hook into the 'init' action
+add_action( 'init', 'skafora_slides', 0 );
+
+// move to single column
+
+add_action('do_meta_boxes', 'sf_slide_image_box');
+
+function sf_slide_image_box() {
+
+  remove_meta_box( 'postimagediv', 'sf_slide', 'side' );
+
+  add_meta_box( 'postimagediv', __( 'Custom Image' ), 'post_thumbnail_meta_box', 'sf_slide', 'normal', 'high' );
+
+}
+
+/**
+ * Sidebar
+ */
+
+function skafora_sidebar() {
+
+  register_sidebar( array(
+    'id'            => 'first_row',
+    'name'          => __( 'First Row', 'skafora' ),
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+  ));
+
+  register_sidebar( array(
+    'id'            => 'second_row',
+    'name'          => __( 'Second Row', 'skafora' ),
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+  ));
+
+  register_sidebar( array(
+    'id'            => 'page_sidebar',
+    'name'          => __( 'Page Sidebar', 'skafora' ),
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+  ));
+}
+
+// Hook into the 'widgets_init' action
+add_action( 'widgets_init', 'skafora_sidebar' );
+
+/**
  * wp_title
  * @link http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_title
  */
