@@ -187,8 +187,8 @@ function skafora_sidebar() {
     'name'          => __( 'First Row', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
-    'before_widget' => '<div class="col span_4_of_12">',
-    'after_widget'  => '</div>',
+    'before_widget' => '<li class="col span_6_of_6">',
+    'after_widget'  => '</li>',
   ));
 
   register_sidebar( array(
@@ -196,8 +196,17 @@ function skafora_sidebar() {
     'name'          => __( 'Second Row', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
-    'before_widget' => '<div class="col span_4_of_12">',
-    'after_widget'  => '</div>',
+    'before_widget' => '<li class="col span_2_of_6">',
+    'after_widget'  => '</li>',
+  ));
+
+  register_sidebar( array(
+    'id'            => 'third_row',
+    'name'          => __( 'Thrid Row', 'skafora' ),
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+    'before_widget' => '<li class="col span_2_of_6">',
+    'after_widget'  => '</li>',
   ));
 
   register_sidebar( array(

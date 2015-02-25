@@ -18,13 +18,13 @@
 </head>
 <body>
 <div class="wrapper">
-<header class="section group">
-<div class="col span_4_of_12">
+<header class="section group header">
+<div class="col span_2_of_6">
 <a href="<?php bloginfo( 'url' ); ?>">
 <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 </a>
 </div>
-<div class="col span_8_of_12">
+<div class="col span_4_of_6">
 <?php 
 wp_nav_menu(array(
   'menu'          => 'Main Navigation', 
