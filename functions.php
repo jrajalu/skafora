@@ -187,7 +187,7 @@ function skafora_sidebar() {
     'name'          => __( 'First Row', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
-    'before_widget' => '<div>',
+    'before_widget' => '<div class="col span_4_of_12">',
     'after_widget'  => '</div>',
   ));
 
@@ -196,7 +196,7 @@ function skafora_sidebar() {
     'name'          => __( 'Second Row', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
-    'before_widget' => '<div>',
+    'before_widget' => '<div class="col span_4_of_12">',
     'after_widget'  => '</div>',
   ));
 
@@ -208,6 +208,16 @@ function skafora_sidebar() {
     'before_widget' => '<div>',
     'after_widget'  => '</div>',
   ));
+
+  register_sidebar( array(
+    'id'            => 'footer',
+    'name'          => __( 'Footer', 'skafora' ),
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+  ));
+  
 }
 
 // Hook into the 'widgets_init' action

@@ -25,4 +25,10 @@ $slide = new WP_Query( $args );
   <?php endif; ?>
   </ul>
 </div>
+<div class="section group">
+  <?php if ( dynamic_sidebar( 'first_row' ) ) : else : endif; ?>
+  </div>
+  <div class="section group">
+  <?php if ( dynamic_sidebar( 'second_row' ) ) : else : endif; ?>
+</div>
 <?php get_footer(); ?>
