@@ -11,6 +11,14 @@ Version: 1.0.0
 @import "grid";
 @import "cssmenu";
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -71,4 +79,29 @@ body {
   li:nth-child(3) h2 {
     background: #F37328;
   }
+}
+
+.widget_footer {
+  li {
+    h2 {
+      display: none;
+    }
+  }
+}
+
+// FOOTER
+
+.footer {
+  background: #E5E5E5;
+  margin-top: 50px;
+}
+
+.footer_logo img {
+  display: block;
+  margin: 10px auto;
+}
+
+.footer_content {
+  padding: 10px;
+  font-size: 11px;
 }

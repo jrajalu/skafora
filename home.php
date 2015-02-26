@@ -20,9 +20,9 @@ $slide = new WP_Query( $args );
   <?php if ( $slide->have_posts() ) : while ( $slide->have_posts() ) : $slide->the_post(); ?>
     <li><?php echo get_the_post_thumbnail(); ?></li>
   <?php endwhile; else: ?>
-    <li><img src="http://placehold.it/960x380" alt="Placeholder" width="960" height="380" /></li>
-    <li><img src="http://placehold.it/960x380" alt="Placeholder" width="960" height="380" /></li>
-    <li><img src="http://placehold.it/960x380" alt="Placeholder" width="960" height="380" /></li>
+    <li><img src="<?php echo get_template_directory_uri(); ?>/img/sample-1.png" alt="Placeholder" width="960" height="380" /></li>
+    <li><img src="<?php echo get_template_directory_uri(); ?>/img/sample-2.png" alt="Placeholder" width="960" height="380" /></li>
+    <li><img src="<?php echo get_template_directory_uri(); ?>/img/sample-3.png" alt="Placeholder" width="960" height="380" /></li>
   <?php endif; ?>
   </ul>
 </div>

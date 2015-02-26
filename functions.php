@@ -184,7 +184,7 @@ function skafora_sidebar() {
 
   register_sidebar( array(
     'id'            => 'first_row',
-    'name'          => __( 'First Row', 'skafora' ),
+    'name'          => __( 'Front: First Row', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
     'before_widget' => '<li class="col span_6_of_6">',
@@ -193,7 +193,7 @@ function skafora_sidebar() {
 
   register_sidebar( array(
     'id'            => 'second_row',
-    'name'          => __( 'Second Row', 'skafora' ),
+    'name'          => __( 'Front: Second Row', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
     'before_widget' => '<li class="col span_2_of_6">',
@@ -202,7 +202,7 @@ function skafora_sidebar() {
 
   register_sidebar( array(
     'id'            => 'third_row',
-    'name'          => __( 'Thrid Row', 'skafora' ),
+    'name'          => __( 'Front: Thrid Row', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
     'before_widget' => '<li class="col span_2_of_6">',
@@ -219,12 +219,20 @@ function skafora_sidebar() {
   ));
 
   register_sidebar( array(
-    'id'            => 'footer',
-    'name'          => __( 'Footer', 'skafora' ),
+    'id'            => 'footer_left',
+    'name'          => __( 'Footer: Left', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
-    'before_widget' => '<div>',
-    'after_widget'  => '</div>',
+    'before_widget' => '<li class="col span_3_of_6 footer_content">',
+    'after_widget'  => '</li>',
+  ));
+  register_sidebar( array(
+    'id'            => 'footer_right',
+    'name'          => __( 'Footer: Right', 'skafora' ),
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+    'before_widget' => '<li class="col span_2_of_6 footer_content">',
+    'after_widget'  => '</li>',
   ));
   
 }
