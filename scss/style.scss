@@ -21,6 +21,7 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
 }
 
 .wrapper {
@@ -36,6 +37,15 @@ body {
 }
 
 // WIDGETS
+
+.widget_second_row,
+.widget_third_row {
+  li {
+    h2 {
+      font-size: 16px;
+    }
+  }
+}
 
 .widget_first_row {
   li {
