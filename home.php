@@ -11,9 +11,7 @@ $args = array(
   'order'           => 'ASC'
 );
 
-$slide = new WP_Query( $args );
-
-?>
+$slide = new WP_Query( $args ); ?>
 
 <div class="flexslider">
   <ul class="slides">

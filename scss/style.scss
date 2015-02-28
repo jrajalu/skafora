@@ -21,7 +21,12 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
+  color: #121212;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
 }
 
 .wrapper {
@@ -36,7 +41,44 @@ body {
   margin-bottom: 20px;
 }
 
+// ARTICLE
+
+.article_header,
+.article {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
 // WIDGETS
+
+.widget_page {
+  .menu {
+    .menu-item {
+      a, a:visited {
+        text-decoration: none;
+        color: #00A59B;
+      }
+      a:hover {
+        color: #C7324F;
+      }
+    }
+  }
+}
+
+.widget_page_child {
+  li {
+    a, a:visited {
+      text-decoration: none;
+      color: #00A59B;
+    }
+    a:hover {
+      color: #C7324F;
+    }
+  }
+}
 
 .widget_second_row,
 .widget_third_row {

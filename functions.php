@@ -45,6 +45,7 @@ add_action( 'wp_enqueue_scripts', 'skafora_scripts' );
     wp_enqueue_script( 'default', get_template_directory_uri() . '/js/script.min.js', array(), '6.5', true );
     // stylesheet
     wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/lib/flexslider/flexslider.css', false, '2.2.2' );
+    wp_enqueue_style( 'fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', false, '4.3.0' );
     wp_enqueue_style( 'style', get_stylesheet_uri(), false, '6.5' );
   }
 
@@ -211,10 +212,10 @@ function skafora_sidebar() {
 
   register_sidebar( array(
     'id'            => 'page_sidebar',
-    'name'          => __( 'Page Sidebar', 'skafora' ),
+    'name'          => __( 'Page: Sidebar', 'skafora' ),
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
-    'before_widget' => '<div>',
+    'before_widget' => '<div class="widget_page">',
     'after_widget'  => '</div>',
   ));
 
