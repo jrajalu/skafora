@@ -264,3 +264,44 @@ function skafora_wp_title( $title, $sep ) {
   return $title;
 }
 add_filter( 'wp_title', 'skafora_wp_title', 10, 2 );
+
+/**
+ * Login Page
+ * http://codex.wordpress.org/Customizing_the_Login_Form
+ */
+
+function skafora_login_logo() { ?>
+  <style type="text/css">
+    body.login div#login h1 a {
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo-single.png);
+      -webkit-background-size: 200px;
+      background-size: 200px;
+      background-position: center top;
+      background-repeat: no-repeat;
+      color: #999;
+      height: 80px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.3em;
+      margin: 0 auto 0;
+      padding: 0;
+      text-decoration: none;
+      width: 200px;
+      text-indent: -9999px;
+      outline: 0;
+      overflow: hidden;
+      display: block;
+    }
+  </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'skafora_login_logo' );
+
+function skafora_login_logo_url() {
+  return home_url();
+}
+add_filter( 'login_headerurl', 'skafora_login_logo_url' );
+
+function skafora_login_logo_url_title() {
+  return get_bloginfo( 'name' );
+}
+add_filter( 'login_headertitle', 'skafora_login_logo_url_title' );
