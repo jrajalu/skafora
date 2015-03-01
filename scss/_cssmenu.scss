@@ -14,6 +14,11 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+#cssmenu ul {
+  float: right;
+}
+
 #cssmenu:after,
 #cssmenu > ul:after {
   content: ".";
@@ -38,8 +43,7 @@
   float: right;
 }
 #cssmenu > ul > li {
-  //float: left;
-  float: right;
+  float: left;
   display: inline-block;
 }
 #cssmenu.align-center > ul {
@@ -222,6 +226,11 @@
   #cssmenu {
     background: #C7324F;
   }
+
+  #cssmenu ul {
+    float: none;
+  }
+
   #cssmenu > ul {
     display: none;
   }
