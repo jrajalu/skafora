@@ -3,7 +3,7 @@ Theme Name: Skafora
 Theme URI: https://github.com/jrajalu/skafora.git
 Author: Jamaludin Rajalu
 Author URI: https://github.com/jrajalu
-Version: 1.0.1
+Version: 1.0.2
 */
 
 @import "webfonts";
@@ -104,10 +104,20 @@ h1, h2, h3, h4, h5, h6 {
     h2 {
       padding: 5px 10px;
       font-weight: normal;
-      color: #000;
-      background: #CCCCCB;
+      color: #fff;
       text-align: center;
     }
+  }
+  li:nth-child(1) h2 {
+    background: #9F7A82;
+  }
+
+  li:nth-child(2) h2 {
+    background: #364B65;
+  }
+
+  li:nth-child(3) h2 {
+    background: #AE4E8D;
   }
 }
 
